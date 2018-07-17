@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+	<style>
+			form {
+				line-height: 2em
+			}
+
+			table {
+				background-color: yellow
+			}
+			h3 {
+				color: green;
+				font-family: Arial
+
+			}
+
+	</style>
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="file:///home/user/src/html-forms/favicon-16x16.png">
+
+
+	<title>Ubermelon Order Form</title>
+	</head>
+
+	<body>
+		<h1>Order!</h1>
+		<hr>
+		<h3>Prices</h3>
+
+	<table>
+		<tr>
+			<th>Melon Name</th>
+			<th>Price per lb</th>
+		</tr>
+		<tr>
+			<td>Watermelon</td>
+			<td>$1.59</td>
+		</tr>
+		<tr>
+			<td>Honeydew</td>
+			<td>$0.99</td>
+		</tr>
+		<tr>
+			<td>Canteloupe</td>
+			<td>$1.29</td>
+		</tr>
+		<tr>
+			<td>Crenshaw</td>
+			<td>$2.19</td>
+		</tr>
+		<tr>
+			<td>Canary</td>
+			<td>$11.99</td>
+		</tr>
+	</table>	
+
+	<p style="color:red">Place your orders here! <span style="color:blue">You know you want to!</span></p>
+
+	<form action="https://ubermelon-order-form.herokuapp.com/process" method="GET">
+		First Name <input type="text" name="firstname"><br>
+
+		Last Name <input type="text" name="lastname"><br>
+
+		Melon Type 
+			<select name="melontype" required>
+				<option> </option>
+				<option value="watermelon">Watermelon</option>
+				<option value="honeydew">Honeydew</option>
+				<option value="canteloupe">Cantelope</option>
+				<option value="canary">Canary</option>
+			</select>
+			<br>
+
+		Quantity* <input type="text" name="quantity"><br>
+
+		Delivery Time 
+			<input type="radio" name="time" value="am">12:00am-12:00pm | 
+			<input type="radio" name="time" value="pm">12:00pm-12:00am | 
+			<input type="radio" name="time" value="wat">
+			Time is an illusion
+			<br>
+
+		Returning Customer? <input type="radio" name="returning" value="yes">Yes
+		<input type="radio" name="returning" value="no">No
+		<br>
+
+		Statistics 
+			<input type="checkbox" name="stats" Value="Dog">Dog
+			<input type="checkbox" name="stats" Value="Cat">Cat
+			<input type="checkbox" name="stats" Value="Hedgehog">Hedgehog
+			<input type="checkbox" name="stats" Value="Baloonicorn">
+			Baloonicorn
+			<input type="checkbox" name="stats" Value="Yak">Yak
+			<br>
+		<button type="submit">Enter Form</button>
+	</form>
+	<hr>
+	</body>
+	<foot> *Quantities given are by the flat<foot>
+</html>	
